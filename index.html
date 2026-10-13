@@ -3,20 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#f7f7f5" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#111113" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#C9C6F4" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1B2233" media="(prefers-color-scheme: dark)" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <link rel="icon" href="/ludi/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/ludi/apple-touch-icon.png" />
     <meta name="robots" content="noindex" />
     <title>Ludi</title>
-    <style>#launch{z-index:50;background:#f7f7f5;place-items:center;transition:opacity .3s;display:grid;position:fixed;inset:0}#launch div{color:#fff;background:#3352d1;border-radius:22px;place-items:center;width:88px;height:88px;font:800 44px/1 system-ui,-apple-system,sans-serif;animation:.45s cubic-bezier(.34,1.56,.64,1) both launch-in;display:grid}@keyframes launch-in{0%{opacity:0;transform:scale(.9)}}@media (prefers-color-scheme:dark){#launch{background:#111113}#launch div{color:#0d0e14;background:#8aa0f7}}@media (prefers-reduced-motion:reduce){#launch div{animation:none}}</style>
-    <script type="module" crossorigin src="/ludi/assets/index-C9hfGxME.js"></script>
-    <link rel="stylesheet" crossorigin href="/ludi/assets/index-6CjtMPG0.css">
+    <style>#launch{color:#111;z-index:50;background:#c9c6f4;place-items:center;transition:opacity .3s;display:grid;position:fixed;inset:0}#launch .row{align-items:center;display:flex}#launch .tile{z-index:2;background:#f5c518;border-radius:28px;flex:none;width:96px;height:96px;animation:.26s cubic-bezier(.4,0,.6,1) both launch-drop,.12s ease-out .26s forwards launch-squash;position:relative;box-shadow:inset 0 -6px #0000001a}#launch .eye{background:#111;border-radius:6px;width:11px;height:15px;animation:.1s ease-in-out .36s both launch-blink;position:absolute;top:36px}#launch .eye:first-child{left:30px}#launch .eye:last-child{left:54px}#launch .word{width:0;animation:.22s cubic-bezier(.2,.8,.2,1) .38s both launch-reveal;overflow:hidden}#launch .word span{letter-spacing:-.05em;white-space:nowrap;padding-left:16px;font:800 80px/1 Bricolage Grotesque Variable,system-ui,-apple-system,sans-serif;display:block}@keyframes launch-drop{0%{transform:translateY(-380px)}}@keyframes launch-squash{0%{transform:scale(1.12,.88)}}@keyframes launch-blink{50%{transform:scaleY(.1)}}@keyframes launch-reveal{to{width:190px}}@media (prefers-color-scheme:dark){#launch{color:#edebe4;background:#1b2233}}@media (prefers-reduced-motion:reduce){#launch .tile,#launch .eye,#launch .word{animation:none}#launch .word{width:190px}}</style>
+    <script type="module" crossorigin src="/ludi/assets/index-pNVleQWX.js"></script>
+    <link rel="stylesheet" crossorigin href="/ludi/assets/index-BnQb1RGz.css">
   <link rel="manifest" href="/ludi/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/ludi/registerSW.js"></script></head>
   <body>
-    <div id="launch" aria-hidden="true"><div>L</div></div>
+    <div id="launch" aria-hidden="true">
+      <div class="row"><div class="tile"><span class="eye"></span><span class="eye"></span></div><div class="word"><span>Ludi</span></div></div>
+    </div>
     <div id="root"></div>
   </body>
 </html>
