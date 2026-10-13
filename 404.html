@@ -5,31 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="theme-color" content="#C9C6F4" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#1B2233" media="(prefers-color-scheme: dark)" />
-    <script>
-      // Blocking on purpose: applies the saved light/dark choice before first paint (no flash). Must stay in sync with
-      // app/src/shared/theme (key, values, colours). Literal colours: this file can't use tokens (they equal `bg` in tokens.json).
-      try {
-        var t = localStorage.getItem("ludi.theme");
-        if (t === "light" || t === "dark") {
-          var d = document.documentElement;
-          d.dataset.theme = t;
-          d.style.colorScheme = t;
-          // Both metas get the chosen colour, otherwise the first one matching the phone's scheme would win.
-          document.querySelectorAll('meta[name="theme-color"]').forEach(function (m) {
-            m.content = t === "dark" ? "#1B2233" : "#C9C6F4";
-          });
-        }
-      } catch (e) {}
-    </script>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <link rel="icon" href="/ludi/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/ludi/apple-touch-icon.png" />
     <meta name="robots" content="noindex" />
     <title>Ludi</title>
-    <style>#launch{color:#111;z-index:50;background:#c9c6f4;place-items:center;transition:opacity .4s;display:grid;position:fixed;inset:0}#launch .row{align-items:center;display:flex}#launch .tile{z-index:2;background:#f5c518;border-radius:28px;flex:none;width:96px;height:96px;animation:.45s cubic-bezier(.4,0,.6,1) both launch-drop,.2s ease-out .45s forwards launch-squash;position:relative;box-shadow:inset 0 -6px #0000001a}#launch .eye{background:#111;border-radius:6px;width:11px;height:15px;animation:.14s ease-in-out .75s both launch-blink;position:absolute;top:36px}#launch .eye:first-child{left:30px}#launch .eye:last-child{left:54px}#launch .word{width:0;animation:.4s cubic-bezier(.2,.8,.2,1) .8s both launch-reveal;overflow:hidden}#launch .word span{letter-spacing:-.05em;white-space:nowrap;padding-left:16px;font:800 80px/1 Bricolage Grotesque Variable,system-ui,-apple-system,sans-serif;display:block}@keyframes launch-drop{0%{transform:translateY(-380px)}}@keyframes launch-squash{0%{transform:scale(1.12,.88)}}@keyframes launch-blink{50%{transform:scaleY(.1)}}@keyframes launch-reveal{to{width:190px}}html[data-theme=dark] #launch{color:#edebe4;background:#1b2233}@media (prefers-color-scheme:dark){html:not([data-theme=light]) #launch{color:#edebe4;background:#1b2233}}@media (prefers-reduced-motion:reduce){#launch .tile,#launch .eye,#launch .word{animation:none}#launch .word{width:190px}}</style>
-    <script type="module" crossorigin src="/ludi/assets/index-DY0OP_Fg.js"></script>
-    <link rel="stylesheet" crossorigin href="/ludi/assets/index-SX8BOxl_.css">
+    <style>#launch{color:#111;z-index:50;background:#c9c6f4;place-items:center;transition:opacity .4s;display:grid;position:fixed;inset:0}#launch .row{align-items:center;display:flex}#launch .tile{z-index:2;background:#f5c518;border-radius:28px;flex:none;width:96px;height:96px;animation:.45s cubic-bezier(.4,0,.6,1) both launch-drop,.2s ease-out .45s forwards launch-squash;position:relative;box-shadow:inset 0 -6px #0000001a}#launch .eye{background:#111;border-radius:6px;width:11px;height:15px;animation:.14s ease-in-out .75s both launch-blink;position:absolute;top:36px}#launch .eye:first-child{left:30px}#launch .eye:last-child{left:54px}#launch .word{width:0;animation:.4s cubic-bezier(.2,.8,.2,1) .8s both launch-reveal;overflow:hidden}#launch .word span{letter-spacing:-.05em;white-space:nowrap;padding-left:16px;font:800 80px/1 Bricolage Grotesque Variable,system-ui,-apple-system,sans-serif;display:block}@keyframes launch-drop{0%{transform:translateY(-380px)}}@keyframes launch-squash{0%{transform:scale(1.12,.88)}}@keyframes launch-blink{50%{transform:scaleY(.1)}}@keyframes launch-reveal{to{width:190px}}@media (prefers-color-scheme:dark){#launch{color:#edebe4;background:#1b2233}}@media (prefers-reduced-motion:reduce){#launch .tile,#launch .eye,#launch .word{animation:none}#launch .word{width:190px}}</style>
+    <script type="module" crossorigin src="/ludi/assets/index-DnmjJBr2.js"></script>
+    <link rel="stylesheet" crossorigin href="/ludi/assets/index-CEuw0c0X.css">
   <link rel="manifest" href="/ludi/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/ludi/registerSW.js"></script></head>
   <body>
     <div id="launch" aria-hidden="true">
